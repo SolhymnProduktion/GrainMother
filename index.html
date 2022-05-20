@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Granular Synthesis</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+  </head>
+<img id="file" src="images/transSOUND.png"  alt="">
+
+<img id="piano" src="images/piano3.png"  alt="">
+
+<img id="grain" src="images/grainmother.png"  alt="">
+
+  <body>
+
+    <video autoplay muted loop id="bgvideo">
+      <source src="video/horisont.mp4" type="video/mp4">
+    </video> 
+
+    <!-- <video autoplay muted loop id="videoLEFT">
+      <source src="video/flower.mp4" type="video/mp4">
+    </video>  -->
+    <video autoplay muted loop id="videoRIGHT">
+      <source src="video/flower.mp4" type="video/mp4">
+    </video> 
+<img src="images/play2.png" alt="play" id="KNAPP1" data-waxml-pointerdown-gain="1" >
+
+<img src="images/pause.png" alt="stop" id="KNAPP2" data-waxml-pointerdown-gain="0" >
+
+
+    <!-- <button id="KNAPP"
+      data-waxml-pointerdown-gain="0"
+    >STOP GRAIN</button> -->
+
+    <input id="LoopStart" type="range" min="0" max="44700" step="1" data-waxml-input-loopstart="this.value" />
+<a id="LS"> 
+    
+    <p>← GRAIN SIZE →</p>
+    <input  type="range" min="30" max="6000" step="0.01" value="100" data-waxml-input-looplength="this.value" />
+    <p>⭋ GRAIN SIZE RAND ⥴</p>
+    <input  type="range" min="0" max="0.10" step="0.001" value="0.0" data-waxml-input-randomDuration="this.value" />
+    <p>⤽ GRAIN POSITION RAND ⤼</p>
+    <input   type="range" min="0" max="0.1" step="0.001" value="0.0" data-waxml-input-randomposition="this.value" />
+    <p>⫷ REVERB ⫸</p>
+    <input  type="range" min="0" max="1.5" step="0.001" value="1" data-waxml-input-revgain="this.value" />
+</a>
+
+<a id="MIDI">
+<p>MIDI COMPATIBLE</p>
+
+</a>
+
+    <script src="script/WebAudioXML.js" data-source="audio-config.xml"></script>
+
+  </body>
+</html>
